@@ -2,3 +2,4 @@
 .venv
 translations/**
 .env
+db.sqlite3

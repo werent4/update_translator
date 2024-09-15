@@ -17,4 +17,6 @@ RUN pip install --upgrade pip && \
 EXPOSE 8000
 
 # Run app.py when the container launches
-CMD ["python3", "manage.py", "runserver","0.0.0.0:8000"]
+RUN python3 manage.py collectstatic
+
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000", "--insecure"]
